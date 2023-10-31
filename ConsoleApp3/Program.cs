@@ -31,18 +31,18 @@ namespace HelloWorld
         // SumFunction
         static int Sum(int x)
         {
-            int result1=0,result2=0;
-
-            for (int i = 1; result1 < x; i++)
+            int result1=0,index = 1;
+            while (true)
             {
-                result1 += i;
-                result2 = result1 - i;
+                result1 += index;
+                if (result1 >= x)
+                {
+                    result1 -=index;
+                    return result1;
+                }
+                index++;
             }
-            if(result1 - x < x- result2)
-            {
-                return result1;
-            }
-            return result2;
+            
         }
 
     }
